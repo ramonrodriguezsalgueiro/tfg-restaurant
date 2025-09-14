@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Gestión de reservas</title>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <nav>
+      <a href="/orderManagement">Comandas</a> ·
+      <a href="/bookManagement">Reservas</a> ·
+      <a href="/inventory">Inventario</a> ·
+      <a id="logout" href="#">Salir</a>
+    </nav>
+  </header>
+  <main class="container">
+    <section class="card">
+      <h1>Reservas</h1>
+      <div class="row">
+        <input type="date" id="dateFilter" />
+        <button id="refresh">Actualizar</button>
+      </div>
+      <table id="reservations" class="table"></table>
+    </section>
+  </main>
+  <script src="/js/bookManagement.js"></script>
+</body>
+</html>

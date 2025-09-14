@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Reservar mesa</title>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <nav>
+      <a href="/order">Pedidos</a> ·
+      <a href="/book">Reservas</a> ·
+      <a id="logout" href="#">Salir</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h1>Reservar</h1>
+
+      <form id="bookForm" class="form-grid">
+
+        <!-- Buscador de restaurante -->
+        <div style="position: relative;">
+          <label>Buscar restaurante
+            <input type="text" id="restSearch" placeholder="Nombre o CIF" autocomplete="off" />
+            <input type="hidden" name="restaurantId" id="restaurantId" />
+          </label>
+          <!-- Resultados del buscador -->
+          <div id="restResults"
+               class="card"
+               style="display:none; position:absolute; left:0; right:0; top:72px; z-index:10; max-height:260px; overflow:auto;">
+          </div>
+        </div>
+
+        <label>Fecha
+          <input type="date" name="date" required />
+        </label>
+
+        <label>Hora
+          <input type="time" name="time" required />
+        </label>
+
+        <label>Número de comensales
+          <input type="number" name="partySize" min="1" value="2" required />
+        </label>
+
+        <label>Notas
+          <input type="text" name="notes" placeholder="Opcional" />
+        </label>
+
+        <div class="row">
+          <button type="button" id="checkAvailability">Comprobar disponibilidad</button>
+          <button type="submit">Reservar</button>
+        </div>
+
+        <p id="availability" class="muted"></p>
+      </form>
+
+      <hr />
+
+      <h2>Mis reservas</h2>
+      <table id="myBookings" class="table"></table>
+    </section>
+  </main>
+
+  <script src="/js/book.js"></script>
+</body>
+</html>

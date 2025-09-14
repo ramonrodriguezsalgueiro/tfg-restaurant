@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Iniciar sesión · Restaurante</title>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <main class="container">
+    <section class="card">
+      <h1>Iniciar sesión</h1>
+      <form id="loginForm" class="form-grid">
+        <label>Usuario o email
+          <input type="text" name="user" required placeholder="usuario o correo" />
+        </label>
+        <label>Contraseña
+          <input type="password" name="password" required placeholder="••••••••" />
+        </label>
+        <button type="submit">Entrar</button>
+      </form>
+      <p class="muted">¿No tienes cuenta? <a href="/register">Regístrate</a></p>
+    </section>
+  </main>
+  <script src="/js/login.js"></script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Gestión de comandas</title>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <nav>
+      <a href="/orderManagement">Comandas</a> ·
+      <a href="/bookManagement">Reservas</a> ·
+      <a href="/inventory">Inventario</a> ·
+      <a id="logout" href="#">Salir</a>
+    </nav>
+  </header>
+  <main class="container">
+    <section class="card">
+      <h1>Comandas</h1>
+      <div class="row">
+        <select id="statusFilter">
+          <option value="">Todas</option>
+          <option value="new">Nuevas</option>
+          <option value="preparing">En preparación</option>
+          <option value="ready">Listas</option>
+          <option value="served">Servidas</option>
+          <option value="cancelled">Canceladas</option>
+        </select>
+        <button id="refresh">Actualizar</button>
+      </div>
+      <table id="orders" class="table"></table>
+    </section>
+  </main>
+  <script src="/js/orderManagement.js"></script>
+</body>
+</html>

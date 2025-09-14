@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Registro · Restaurante</title>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <main class="container">
+    <section class="card">
+      <h1>Registro</h1>
+
+      <form id="registerForm" class="form-grid">
+        <label>Usuario
+          <input type="text" name="username" required />
+        </label>
+
+        <label>Email
+          <input type="email" name="email" required />
+        </label>
+
+        <label>Contraseña
+          <input type="password" name="password" required />
+        </label>
+
+        <label>Rol
+          <select name="role" id="roleSelect">
+            <option value="customer" selected>Cliente</option>
+            <option value="employee">Empleado</option>
+          </select>
+        </label>
+
+        <!-- Campos específicos de CLIENTE -->
+        <fieldset id="customerFields">
+          <legend>Datos de cliente</legend>
+          <label>Teléfono
+            <input type="tel" name="phone" placeholder="+34 600 000 000" pattern="[0-9+()\-.\s]{6,}" />
+          </label>
+          <label>Alergias o restricciones
+            <input type="text" name="allergies" placeholder="Gluten, lactosa, frutos secos..." />
+          </label>
+        </fieldset>
+
+        <!-- Campos específicos de EMPLEADO -->
+        <fieldset id="employeeFields" class="hidden">
+          <legend>Datos de empleado</legend>
+          <label>CIF del restaurante
+            <input type="text" name="cif" placeholder="B12345678" />
+          </label>
+          <label>Nombre del restaurante
+            <input type="text" name="restaurantName" placeholder="Mi Restaurante S.L." />
+          </label>
+        </fieldset>
+
+        <button type="submit">Crear cuenta</button>
+      </form>
+
+      <p class="muted">¿Ya tienes cuenta? <a href="/">Inicia sesión</a></p>
+    </section>
+  </main>
+
+  <script src="/js/register.js"></script>
+</body>
+</html>

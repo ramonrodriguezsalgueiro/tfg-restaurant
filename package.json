@@ -1,0 +1,21 @@
+{
+  "name": "tfg-restaurant-app",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Simple restaurant app for bookings, orders, and inventory with employee management (Node.js + MySQL).",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node index.js",
+    "start": "NODE_ENV=production node index.js"
+  },
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "bcryptjs": "^2.4.3",
+    "cookie-parser": "^1.4.7",
+    "dayjs": "^1.11.13",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "jsonwebtoken": "^9.0.2",
+    "mysql2": "^3.11.0"
+  }
+}
